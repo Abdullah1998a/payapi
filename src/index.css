@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: "dm-serif-display";
+    src: url("./pages/assets/fonts/dm-serif-display-regular.ttf");
+}
+@font-face {
+    font-family: "public-sans";
+    src: url("./pages/assets/fonts/public-sans.ttf");
+}
+::-webkit-scrollbar {
+    @apply hidden;
+}
+.stop-scrolling {
+    @apply overflow-clip;
+}
+body {
+    @apply font-public_sans;
+    background-image: url("./pages/assets/images/bg-pattern-circle.svg");
+    background-repeat: no-repeat;
+    background-position: 130% -15rem;
+}
+@media screen and (max-width: 992px) {
+    body {
+        background-size: 80%;
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+        background-size: initial;
+        background-position: center -20rem;
+    }
+}
+h1,h2,h3 {
+    @apply font-dm_serif;
+}
+.btn {
+    @apply bg-[#b84270] text-white py-3 px-6 rounded-full text-sm hover:opacity-80 duration-200;
+}
